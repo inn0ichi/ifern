@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Divider, Container, Avatar, IconButton } from '@mui/material';
+import { Box, Typography, Divider, Container, Button, IconButton } from '@mui/material';
 import bg from '../assets/bg.jpg'
 import "./Home.css";
 import Logo from '../assets/logo/ifernLogo-trimmed.png';
@@ -7,10 +7,10 @@ import img1 from '../assets/awards/1.png';
 import img2 from '../assets/awards/2.png';
 import img3 from '../assets/awards/3.png';
 import img4 from '../assets/awards/4.png';
-import prodimg1 from '../assets/productImg/1.jpg';
-import prodimg2 from '../assets/productImg/2.jpg';
-import prodimg3 from '../assets/productImg/3.jpg';
-import prodimg4 from '../assets/productImg/4.jpg';
+import prodimg1 from '../assets/productImg/1.png';
+import prodimg2 from '../assets/productImg/2.png';
+import prodimg3 from '../assets/productImg/3.png';
+import prodimg4 from '../assets/productImg/4.png';
 import jack from '../assets/members/jack.jpg';
 import ayin from '../assets/members/ayinn.jpg';
 import elsa from '../assets/members/elsa.jpg';
@@ -23,18 +23,20 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
+import { Link, useHistory } from "react-router-dom";
+
 
 const slides = [
-    { title: 'Fern-Activ', description: 'Vitamins and Minerals', image: prodimg1, button: "View Product" },
-    { title: 'Fern-D', description: 'Vitamin D', image: prodimg2, button: "View Product" },
-    { title: 'MilkCa', description: 'Milk Calcium Complex', image: prodimg3, button: "View Product" },
-    { title: 'Fern Flex', description: 'Food Supplement', image: prodimg4, button: "View Product" }
+    { title: 'Fern-Activ', description: 'Vitamins and Minerals', image: prodimg1, button: "View Product", link: "/Activ" },
+    { title: 'Fern-D', description: 'Vitamin D', image: prodimg2, button: "View Product", link: "/FernD" },
+    { title: 'MilkCa', description: 'Milk Calcium Complex', image: prodimg3, button: "View Product", link: "/MilkCa" },
+    { title: 'Fern Flex', description: 'Food Supplement', image: prodimg4, button: "View Product", link: "/Flex" }
 ];
 
 
 
 export default function Home() {
-
+    const history = useHistory();
     return (
         <Box>
 
@@ -87,18 +89,16 @@ export default function Home() {
                 </Box>
             </Box>
             <Box className="productsBox" display="flex" flexDirection="column">
+
                 <Slider className="slider-wrapper">
                     {slides.map((slide, index) => (
                         <div
                             key={index}
                             className="slider-content"
-                            style={{ background: `url('${slide.image}') no-repeat center center` }}
+                            style={{ background: `url('${slide.image}') no-repeat center center`, display: "flex", flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+
                         >
-                            <div className="inner">
-                                <h1>{slide.title}</h1>
-                                <p>{slide.description}</p>
-                                <button>{slide.button}</button>
-                            </div>
+                            <Button variant='contained' onClick={() => history.push(`/${slide.link}`)}>Learn More</Button>
                         </div>
                     ))}
                 </Slider>
@@ -239,7 +239,7 @@ export default function Home() {
                     </Card>
                 </Box>
             </Box>
-        </Box>
+        </Box >
 
     )
 }
