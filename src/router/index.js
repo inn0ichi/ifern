@@ -11,7 +11,7 @@ import {
 import { CssBaseline } from "@mui/material";
 import Nav from "../components/Nav";
 import Home from "../pages/Home";
-
+import Footer from "../components/Footer";
 
 export default function RouterComponent() {
 
@@ -51,6 +51,7 @@ export default function RouterComponent() {
         <Switch>
           <Route exact component={Home} path="/" />
         </Switch>
+        <Footer />
       </Router>
     </ThemeProvider>
   );

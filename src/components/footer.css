@@ -1,0 +1,64 @@
+.footerBox {
+    min-height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #313131;
+}
+
+.logo {
+    width: 100px;
+    height: 54px;
+}
+
+.part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.dsm {
+    width: 100px;
+    height: 35px;
+}
+
+.blends {
+    width: 118px;
+    height: 30px;
+}
+
+.qd {
+    width: 100px;
+    height: 26px;
+}
+
+.truecal {
+    width: 75px;
+    height: 25px;
+}
+
+.qc {
+    width: 100px;
+    height: 25px;
+}
+
+.brands {
+    margin: 10px;
+}
+
+@media only screen and (max-width: 680px) {
+    .part2 {
+        display: none;
+    }
+}
