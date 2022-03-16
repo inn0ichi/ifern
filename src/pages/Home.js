@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Typography, Divider, Container, Button, IconButton } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, Divider, Container, Button, TextField, Paper } from '@mui/material';
 import bg from '../assets/bg.jpg'
 import "./Home.css";
 import Logo from '../assets/logo/ifernLogo-trimmed.png';
@@ -24,7 +24,8 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import { Link, useHistory } from "react-router-dom";
-
+import { init, sendForm } from '@emailjs/browser';
+init("M8rlQnvHUcmVPTtBt");
 
 const slides = [
     { title: 'Fern-Activ', description: 'Vitamins and Minerals', image: prodimg1, button: "View Product", link: "/Activ" },
@@ -37,9 +38,20 @@ const slides = [
 
 export default function Home() {
     const history = useHistory();
+
+    const submit = (e) => {
+        var contact_number = Math.random() * 100000 | 0;
+        sendForm('service_csskpqi', 'template_j4ly4ge', '#form')
+            .then(function () {
+                console.log('SUCCESS!');
+                alert("Email successfully sent. We will get back to you shortly.")
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
+        document.getElementById("form").reset();
+    }
     return (
         <Box>
-
             <Box className="homeBg" display="flex" flexDirection="column">
                 <img className='homeLogo' src={Logo} alt="ifernLogo" />
                 <Typography color="#00A24D" variant="h1" fontWeight="bold">Team Bulacan</Typography>
@@ -95,9 +107,11 @@ export default function Home() {
                         <div
                             key={index}
                             className="slider-content"
-                            style={{ background: `url('${slide.image}') no-repeat center center`, display: "flex", flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
+                            style={{ background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('${slide.image}') no-repeat center center`, display: "flex", flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}
 
                         >
+                            <Typography variant='h1' color='#fff'>{slide.title}</Typography>
+                            <Typography variant='h5' color='#fff'>{slide.description}</Typography>
                             <Button variant='contained' onClick={() => history.push(`/${slide.link}`)}>Learn More</Button>
                         </div>
                     ))}
@@ -238,6 +252,19 @@ export default function Home() {
                         </CardContent>
                     </Card>
                 </Box>
+            </Box>
+            <Box className="contactBox">
+                <Paper>
+                    <header className='header'>CONTACT US</header>
+                    <form id="form" class="topBefore">
+
+                        <input id="name" type="text" placeholder="NAME" name="user_name" />
+                        <input id="email" type="text" placeholder="E-MAIL" name="user_email" />
+                        <textarea id="message" type="text" placeholder="MESSAGE" name="message"></textarea>
+                        <input id="submit" type="button" onClick={() => submit()} value="SEND" />
+
+                    </form>
+                </Paper>
             </Box>
         </Box >
 
