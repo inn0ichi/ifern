@@ -52,13 +52,13 @@ export default function Home() {
     }
     return (
         <Box>
-            <Box className="homeBg" display="flex" flexDirection="column">
+            <Box id="homeBox" className="homeBg" display="flex" flexDirection="column">
                 <img className='homeLogo' src={Logo} alt="ifernLogo" />
                 <Typography color="#00A24D" variant="h1" fontWeight="bold">Team Bulacan</Typography>
                 <Divider orientation="horizontal" flexItem variant='middle' className='homeDivide MuiDivider-light' />
                 <Typography color="#fff" variant="h4" fontWeight="bold" sx={{ letterSpacing: "3px" }}>As long as you are capable, Be UnsTOPpable!</Typography>
             </Box>
-            <Box className="aboutUsBox" display="flex" >
+            <Box id="aboutUS" className="aboutUsBox" display="flex" >
                 <Box display="flex" className='internalAboutBox' >
 
                     <Box className='part1'>
@@ -100,7 +100,7 @@ export default function Home() {
                     <img src={img4} alt='award4' className='awardImg halal' />
                 </Box>
             </Box>
-            <Box className="productsBox" display="flex" flexDirection="column">
+            <Box id="products" className="productsBox" display="flex" flexDirection="column">
 
                 <Slider className="slider-wrapper">
                     {slides.map((slide, index) => (
@@ -117,7 +117,7 @@ export default function Home() {
                     ))}
                 </Slider>
             </Box>
-            <Box className="teamBox">
+            <Box id="meetTeam" className="teamBox">
                 <Box className='teamPart1'>
                     <img src={logoAlt} className='teamLogo' />
                     <Typography className='MeetTeamHeader' variant="h1" color="#fff">Meet The Team</Typography>
@@ -253,7 +253,7 @@ export default function Home() {
                     </Card>
                 </Box>
             </Box>
-            <Box className="contactBox">
+            <Box id="contact" className="contactBox">
                 <Paper>
                     <header className='header'>CONTACT US</header>
                     <form id="form" class="topBefore">

@@ -12,8 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../assets/logo/ifernLogo.png';
+import { Link, animateScroll as scroll } from "react-scroll";
 import "./Nav.css";
 const pages = ['Home', 'About Us', 'Products', 'Contact Us'];
+
 
 const Nav = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -25,6 +27,7 @@ const Nav = () => {
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
+
 
     return (
         <AppBar position="fixed" color="transparent" elevation={0}>
@@ -84,15 +87,63 @@ const Nav = () => {
                         <img src={Logo} alt="logo" className='logo' />
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center", alignItems: "center" }}>
-                        {pages.map((page) => (
+                        <Link
+                            activeClass="active"
+                            to="homeBox"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}>
                             <Button
-                                key={page}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                {page}
+                                HOME
                             </Button>
-                        ))}
+                        </Link>
+
+                        <Link
+                            activeClass="active"
+                            to="aboutUS"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}>
+                            <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                ABOUT US
+                            </Button>
+                        </Link>
+                        <Link
+                            activeClass="active"
+                            to="products"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}>
+                            <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                PRODUCTS
+                            </Button>
+                        </Link>
+                        <Link
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}>
+                            <Button
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                CONTACT US
+                            </Button>
+                        </Link>
                     </Box>
 
 
