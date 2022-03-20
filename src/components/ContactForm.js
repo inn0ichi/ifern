@@ -27,10 +27,10 @@ export default function ContactForm() {
             <header className='header'>CONTACT US</header>
             <form id="form" class="topBefore">
 
-                <input id="name" type="text" placeholder="NAME" name="user_name" />
-                <input id="email" type="text" placeholder="E-MAIL" name="user_email" />
-                <textarea id="message" type="text" placeholder="MESSAGE" name="message"></textarea>
-                <input id="submit" type="button" onClick={() => submit()} value="SEND" />
+                <input aria-label="name of user" id="name" type="text" placeholder="NAME" name="user_name" />
+                <input aria-label="email of user" id="email" type="text" placeholder="E-MAIL" name="user_email" />
+                <textarea aria-label="user message" id="message" type="text" placeholder="MESSAGE" name="message"></textarea>
+                <input aria-label="send message button" id="submit" type="button" onClick={() => submit()} value="SEND" />
 
             </form>
         </Paper>
