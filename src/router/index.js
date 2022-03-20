@@ -50,6 +50,10 @@ export default function RouterComponent() {
         <Nav />
         <Switch>
           <Route exact component={Home} path="/" />
+          <Route exact component={Home} path="/Activ" />
+          <Route exact component={Home} path="/MilkCa" />
+          <Route exact component={Home} path="/Flex" />
+          <Route exact component={Home} path="/FernD" />
         </Switch>
         <Footer />
       </Router>

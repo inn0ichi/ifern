@@ -4,6 +4,10 @@
     box-sizing: inherit;
 }
 
+body {
+    background: #e2dedb;
+}
+
 .homeBg {
     background-image:
         linear-gradient(to bottom, rgba(48, 48, 48, 0.52), rgba(90, 90, 90, 0.73)),

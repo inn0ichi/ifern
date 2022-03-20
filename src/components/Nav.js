@@ -14,6 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Logo from '../assets/logo/ifernLogo.png';
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./Nav.css";
+import { useHistory } from "react-router-dom";
+
 const pages = ['Home', 'About Us', 'Products', 'Contact Us'];
 
 
@@ -28,6 +30,7 @@ const Nav = () => {
         setAnchorElNav(null);
     };
 
+    const history = useHistory();
 
     return (
         <AppBar position="fixed" color="transparent" elevation={0}>
@@ -71,11 +74,52 @@ const Nav = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                            <Link
+                                activeClass="active"
+                                to="homeBox"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}
+                                onClick={() => history.push('/')}
+                            >
+                                <MenuItem>
+                                    <Typography textAlign="center">HOME</Typography>
                                 </MenuItem>
-                            ))}
+                            </Link>
+                            <Link
+                                activeClass="active"
+                                to="aboutUS"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}>
+                                <MenuItem onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">ABOUT US</Typography>
+                                </MenuItem>
+                            </Link>
+                            <Link
+                                activeClass="active"
+                                to="products"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}>
+                                <MenuItem onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">PRODUCTS</Typography>
+                                </MenuItem>
+                            </Link>
+                            <Link
+                                activeClass="active"
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}>
+                                <MenuItem onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">CONTACT US</Typography>
+                                </MenuItem>
+                            </Link>
                         </Menu>
                     </Box>
                     <Typography
@@ -93,7 +137,9 @@ const Nav = () => {
                             spy={true}
                             smooth={true}
                             offset={-70}
-                            duration={500}>
+                            duration={500}
+                            onClick={() => history.push('/')}
+                        >
                             <Button
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
