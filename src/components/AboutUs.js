@@ -29,7 +29,7 @@ export default function AboutUs() {
                         </Typography>
                     </Container>
                 </Box>
-                <Divider orientation="vertical" flexItem variant='middle' />
+                <Divider orientation="vertical" flexItem variant='middle' sx={{ borderRightWidth: 3 }} />
                 <Box className='part2'>
                     <Container>
                         <div className="panelsAbout">

@@ -17,7 +17,7 @@ export default function MeetTheTeam() {
                 <img src={logoAlt} className='teamLogo' />
                 <Typography className='MeetTeamHeader' variant="h1" color="#fff">Meet The Team</Typography>
             </Box>
-            <Divider orientation="horizontal" flexItem variant='middle' />
+            <Divider orientation="horizontal" flexItem variant='middle' sx={{ borderBottomWidth: 5 }} />
             <Box className="teamContainer">
                 <div class="a-box card1">
                     <div class="img-container">

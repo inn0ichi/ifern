@@ -30,7 +30,7 @@ export default function ProductSlider() {
                 >
                     <Typography variant='h1' color='#fff'>{slide.title}</Typography>
                     <Typography variant='h5' color='#fff'>{slide.description}</Typography>
-                    <Button variant='contained' onClick={() => history.push(slide.link)}>Learn More</Button>
+                    <Button color='success' variant='contained' onClick={() => history.push(slide.link)}>Learn More</Button>
                 </div>
             ))}
         </Slider>

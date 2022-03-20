@@ -16,7 +16,7 @@ export default function Home() {
             <Box id="homeBox" className="homeBg" display="flex" flexDirection="column">
                 <img className='homeLogo' src={Logo} alt="ifernLogo" />
                 <Typography color="#00A24D" variant="h1" fontWeight="bold">Team Bulacan</Typography>
-                <Divider orientation="horizontal" flexItem variant='middle' className='homeDivide MuiDivider-light' />
+                <Divider sx={{ borderBottomWidth: 6 }} orientation="horizontal" flexItem variant='middle' className='homeDivide MuiDivider-light' />
                 <Typography color="#fff" variant="h4" fontWeight="bold" sx={{ letterSpacing: "3px" }}>As long as you are capable, Be UnsTOPpable!</Typography>
             </Box>
             <Box id="aboutUS" className="aboutUsBox" display="flex" >
