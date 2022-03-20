@@ -47,10 +47,10 @@ export default function AboutUs() {
                 </Box>
             </Box>
             <Box className='awardsBox'>
-                <img src={img1} alt='award1' className='awardImg' />
-                <img src={img2} alt='award2' className='awardImg fda' />
-                <img src={img3} alt='award3' className='awardImg' />
-                <img src={img4} alt='award4' className='awardImg halal' />
+                <img src={img1} alt='award1' className='awardImg' loading="lazy" />
+                <img src={img2} alt='award2' className='awardImg fda' loading="lazy" />
+                <img src={img3} alt='award3' className='awardImg' loading="lazy" />
+                <img src={img4} alt='award4' className='awardImg halal' loading="lazy" />
             </Box>
         </Box>
 

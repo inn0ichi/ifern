@@ -14,7 +14,7 @@ export default function MeetTheTeam() {
     return (
         <Box id="meetTeam" className="teamBox">
             <Box className='teamPart1'>
-                <img src={logoAlt} className='teamLogo' />
+                <img src={logoAlt} className='teamLogo' loading="lazy" />
                 <Typography className='MeetTeamHeader' variant="h1" color="#fff">Meet The Team</Typography>
             </Box>
             <Divider orientation="horizontal" flexItem variant='middle' sx={{ borderBottomWidth: 5 }} />
@@ -23,7 +23,7 @@ export default function MeetTheTeam() {
                     <div class="img-container">
                         <div class="img-inner">
                             <div class="inner-skew">
-                                <img src={jack} />
+                                <img src={jack} loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ export default function MeetTheTeam() {
                     <div class="img-container">
                         <div class="img-inner">
                             <div class="inner-skew">
-                                <img src={ayin} />
+                                <img src={ayin} loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ export default function MeetTheTeam() {
                     <div class="img-container">
                         <div class="img-inner">
                             <div class="inner-skew">
-                                <img src={franz} />
+                                <img src={franz} loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ export default function MeetTheTeam() {
                     <div class="img-container">
                         <div class="img-inner">
                             <div class="inner-skew">
-                                <img src={jed} />
+                                <img src={jed} loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ export default function MeetTheTeam() {
                     <div class="img-container">
                         <div class="img-inner">
                             <div class="inner-skew">
-                                <img src={elsa} />
+                                <img src={elsa} loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ export default function MeetTheTeam() {
             <Box className='teamCardBox'>
                 <Card className='card'>
                     <CardContent className='cardContainer'>
-                        <img src={jack} className='cardIcon' />
+                        <img src={jack} className='cardIcon' loading="lazy" />
                         <Box className='cardPart2'>
                             <Typography variant='h5'>Jack Sumalinog</Typography>
                             <Typography variant='subtitle1'>Senior Field Manager</Typography>
@@ -108,7 +108,7 @@ export default function MeetTheTeam() {
                 </Card>
                 <Card className='card'>
                     <CardContent className='cardContainer'>
-                        <img src={ayin} className='cardIcon' />
+                        <img src={ayin} className='cardIcon' loading="lazy" />
                         <Box className='cardPart2'>
                             <Typography variant='h5'>Arlyn Santos</Typography>
                             <Typography variant='subtitle1'>Field Manager</Typography>
@@ -118,7 +118,7 @@ export default function MeetTheTeam() {
                 </Card>
                 <Card className='card'>
                     <CardContent className='cardContainer'>
-                        <img src={franz} className='cardIcon' />
+                        <img src={franz} className='cardIcon' loading="lazy" />
                         <Box className='cardPart2'>
                             <Typography variant='h5'>Michael Franz Anzures</Typography>
                             <Typography variant='subtitle1'>Builder</Typography>
@@ -128,7 +128,7 @@ export default function MeetTheTeam() {
                 </Card>
                 <Card className='card'>
                     <CardContent className='cardContainer'>
-                        <img src={jed} className='cardIcon' />
+                        <img src={jed} className='cardIcon' loading="lazy" />
                         <Box className='cardPart2'>
                             <Typography variant='h5'>John Ednar Sincioco</Typography>
                             <Typography variant='subtitle1'>Builder</Typography>
@@ -138,7 +138,7 @@ export default function MeetTheTeam() {
                 </Card>
                 <Card className='card'>
                     <CardContent className='cardContainer'>
-                        <img src={elsa} className='cardIcon' />
+                        <img src={elsa} className='cardIcon' loading="lazy" />
                         <Box className='cardPart2'>
                             <Typography variant='h5'>Ma. Elsa Cruz</Typography>
                             <Typography variant='subtitle1'>Builder</Typography>

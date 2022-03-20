@@ -12,16 +12,16 @@ export default function Footer() {
     return (
         <Box className='footerBox'>
             <Box className='part1'>
-                <img src={Logo} alt='logo' className='logo' />
+                <img src={Logo} alt='logo' className='logo' loading="lazy" />
                 <Typography color="white">©2021</Typography>
             </Box>
             <Divider orientation="horizontal" flexItem variant='middle' />
             <Box className='part2'>
-                <img src={img1} alt='logo' className='brands dsm' />
-                <img src={img2} alt='logo' className='brands blends' />
+                <img src={img1} alt='logo' className='brands dsm' loading="lazy" />
+                <img src={img2} alt='logo' className='brands blends' loading="lazy" />
                 <img src={img3} alt='logo' className='brands qd' />
-                <img src={img4} alt='logo' className='brands truecal' />
-                <img src={img5} alt='logo' className='brands qc' />
+                <img src={img4} alt='logo' className='brands truecal' loading="lazy" />
+                <img src={img5} alt='logo' className='brands qc' loading="lazy" />
             </Box>
 
         </Box>

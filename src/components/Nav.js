@@ -42,7 +42,7 @@ const Nav = () => {
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        <img className='logo' src={Logo} alt="logo" />
+                        <img className='logo' src={Logo} alt="logo" loading="lazy" />
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -128,7 +128,7 @@ const Nav = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        <img src={Logo} alt="logo" className='logo' />
+                        <img src={Logo} alt="logo" className='logo' loading="lazy" />
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "center", alignItems: "center" }}>
                         <Link
